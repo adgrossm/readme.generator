@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./generateMarkdown.js");
+// const { inherits } = require("util");
 
 // const util = require("util");
 
@@ -36,42 +38,49 @@ inquirer.prompt([
         name: "license"
         },
         {
-        type: "list",
+        type: "input",
         message: "What command should be run to install dependencies?",
-        choices: ["npm i"],
+        default: "npm i",
         name: "installation"
         },
-            {
-                type: "list",
-                message: "What command should be run to run tests?",
-                choices: ["npm test"],
-                name: "test"
-            },
-            {
-            type: "input",
-            message: "What does the user need to know about using the repo?",
-            name: "usage"
-            },
-            {
-            type: "input",
-            message: "What does the user need to know about contributing to the repo?",
-            name: "contributing"
-            },
+        {
+        type: "input",
+        message: "What command should be run to run tests?",
+        default: "npm test",
+        name: "test"
+        },
+        {
+        type: "input",
+        message: "What does the user need to know about using the repo?",
+        name: "usage"
+        },
+        {
+        type: "input",
+        message: "What does the user need to know about contributing to the repo?",
+        name: "contributing"
+        },
         ])
       
-.then(answers => {
-    console.log(answers);
+.then(data => {
+    console.log(data);
 
-    let readMe = "";
+    let readMe = generateMarkdown(data);
 
     fs.writeFile("README.md", readMe,  err => {
         if (err){
             return console.log(err);
-    readMe.push(answers.title);
-    readMe.push(data.description);
-        }
-        
+            }
+            console.log("Success!")
+            // tryingt to push the answers to the open string of let readMe
+            
+    //     readMe.push(answers.title);
+    // readMe.push(data.description);
     });
     
 });
 
+function init(){
+
+}
+
+init();
