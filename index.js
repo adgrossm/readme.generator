@@ -1,14 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./generateMarkdown.js");
-// const { inherits } = require("util");
 
-// const util = require("util");
-
-// const writeFileAsync = util.promisify(fs.writeFile);
-// function promptUser(){
-
-// return
 inquirer.prompt([
     // this is where we will put the prompts for the questions we need to ask to build out the array
     {
@@ -62,25 +55,20 @@ inquirer.prompt([
         ])
       
 .then(data => {
-    console.log(data);
 
     let readMe = generateMarkdown(data);
 
     fs.writeFile("README.md", readMe,  err => {
-        if (err){
-            return console.log(err);
-            }
+        if (err)
+        {
+        return console.log(err);
+        }
             console.log("Success!")
-            // tryingt to push the answers to the open string of let readMe
-            
-    //     readMe.push(answers.title);
-    // readMe.push(data.description);
     });
     
 });
 
 function init(){
-
 }
 
 init();
