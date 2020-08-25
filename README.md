@@ -1,10 +1,10 @@
 
-# 
+# Awesome README Generator
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg "License Badge")
 
 ## Description:
-    
+    This project was created to simplify and automate the generation of the README.md file for each of my projects. 
 
 ## Table of Contents
 
@@ -24,7 +24,7 @@
     npm test
 
 ## Usage:
-    
+    Hope you enjoy!
 
 ## Contributing:
     undefined
@@ -37,9 +37,9 @@ For more information about the MIT License, click on the link below.
 ## Questions:
 For additional information about the ReadMe Generator you can go to my GitHub page at the following link:
 
-- [GitHub Profile](https://github.com/)
+- [GitHub Profile](https://github.com/adgrossm)
 
-For additional questions please email me at: 
+For additional questions please email me at: adgrossm@gmail.com
 
 [Video Walkthrough](https://soapbox.wistia.com/videos/pY5wBcn6Fg?preview=true)
  
