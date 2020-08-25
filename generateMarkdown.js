@@ -41,6 +41,8 @@ For additional information about the ReadMe Generator you can go to my GitHub pa
 - [GitHub Profile](https://github.com/${data.username})
 
 For additional questions please email me at: ${data.email}
+
+[Video Walkthrough](https://soapbox.wistia.com/videos/pY5wBcn6Fg?preview=true)
  `;
   }
   
